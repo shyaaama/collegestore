@@ -1,0 +1,40 @@
+{% load static %}
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href='{% static "custom.css" %}' rel="stylesheet">
+    {% block content %}
+    
+    <h1>xyz college store</h1>
+    </head>
+    <body>
+     <div id="header">
+            <div class="navbar"> 
+            <a href="{% url 'schoolapp:login' %}">login</a>
+            <a href="{% url 'schoolapp:register' %}">register</a>
+            <div class="dropdown">
+            <button class="dropbtn">department<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+            <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>
+            <a href="https://en.wikipedia.org/wiki/Commerce">commerce</a>
+            <a href="https://en.wikipedia.org/wiki/Humanities">humanities</a>
+            <a href="https://en.wikipedia.org/wiki/Biology">biology science</a>
+            <a href="https://en.wikipedia.org/wiki/VHS-C"> vhsc</a>
+        </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    
+    </body>
+<!--<div id="centered-button"style="text-align: center;"></div>
+<a href="{% url 'schoolapp:login' %}"><button class="center-button">login</button></a>
+</div>
+</body>-->
+<form method="POST" action="{% url 'schoolapp:login' %}">
+    {{form.as_p}}
+    {% csrf_token %}
+    <p><button class="center-button">login</button></p>
+</form>
+
+{% endblock %}

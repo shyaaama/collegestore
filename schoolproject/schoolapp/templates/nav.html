@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">home</a>
+        </li>
+        <li class="nav-item dropdown {% if 'ecommerce_app' in request.path %} active {% endif %}">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            ecommerce_app
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'ecommerce_app:allProductCat' %}">all products</a></li>
+            {% for cat in links %}
+              <li><a class="dropdown-item" href="{{cat.get_url}}">{{cat.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% if item_count > 0 %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fa fa-shopping-cart"></i>{{item_count}}</a>
+        </li>
+        {% endif %}
+      </ul>
+      <form class="d-flex" action="{% url 'search_app:searchresult' %}" method="get">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i>Search</button>
+      </form>
+    </div>
+    </div>
+  </nav>
+  
+  <!--{% load static %}
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href='{% static "custom.css" %}' rel="stylesheet">
+    {% block content %}
+    <h1>xyz college store</h1>
+    </head>
+    <body>
+     <div id="header">
+            <div class="navbar"> 
+            <a href="{% url 'schoolapp:login' %}">login</a>
+            <a href="{% url 'schoolapp:register' %}">register</a>
+            <div class="dropdown">
+            <button class="dropbtn">department<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+            <a href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>
+            <a href="https://en.wikipedia.org/wiki/Commerce">commerce</a>
+            <a href="https://en.wikipedia.org/wiki/Humanities">humanities</a>
+            <a href="https://en.wikipedia.org/wiki/Biology">biology science</a>
+            <a href="https://en.wikipedia.org/wiki/VHS-C"> vhsc</a>
+        </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    
+    </body>-->
+<!--<div id="centered-button"style="text-align: center;"></div>
+<a href="{% url 'schoolapp:login' %}"><button class="center-button">login</button></a>
+</div>
+</body>-->

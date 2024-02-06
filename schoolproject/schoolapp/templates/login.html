@@ -1,0 +1,16 @@
+{% load static %}
+{% block title %}{% endblock %}
+<link href='{% static "custom.css" %}' rel="stylesheet">
+{% block content %}
+<h1>login</h1>
+<form method="POST" action="{% url 'schoolapp:new_page' %}">
+    {{form.as_p}}
+    {% csrf_token %}
+    <p><input type="submit" ></p>
+</form>
+<div class="register-link">
+    {% if not form.is_bound or form.errors %}
+        Don't have an account? <a href="{% url 'schoolapp:register' %}">Register</a>
+    {% endif %}
+</div>
+{% endblock %}

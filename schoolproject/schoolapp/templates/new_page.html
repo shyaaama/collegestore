@@ -1,0 +1,18 @@
+<!-- yourapp/templates/new_page.html -->
+
+{% load static %}
+
+{% block title %}{% endblock %}
+<link href='{% static "custom.css" %}' rel="stylesheet">
+{% block content %}
+    <h1>New Page</h1>
+    <a href="{% url 'schoolapp:person_add' %}"><button id="showFormButton">Show Form</button></a>
+    
+    <div id="formContainer" style="display: none;">
+        <!-- Your form content goes here -->
+        <form>
+            <!-- Form fields go here -->
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </div>
+{% endblock %}

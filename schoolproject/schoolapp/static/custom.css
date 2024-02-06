@@ -1,0 +1,203 @@
+@import url(//fonts.googleapis.com/css?family=Muli);
+
+body {
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif;
+}
+
+
+
+a {
+    text-align: left !important;
+    color:#12c064;
+    text-decoration:none;
+}
+
+
+
+h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; text-align:center !important; }
+
+h1 {
+    padding:0 0 10px 0;
+    margin:10px 0 20px 0;
+}
+h3 {
+    text-align:center;
+}
+
+h2 {
+    margin:30px 0 20px;
+}
+
+
+
+#header {
+    padding:10px 100px;
+    font-size:14px;
+    background:#12c064;
+    color:#fff;
+    border-bottom:4px solid #1cdf78;
+    overflow:auto;
+}
+#header .navbar{
+    overflow:hidden;
+    background-color:#333;
+    font-family:Arial;
+}
+#header .navbar a {
+    float:left;
+    font-size:16px;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+
+}
+#header .dropdown{
+    float:left;
+    overflow:hidden;
+}
+#header .dropdown .dropbtn{
+    font-size:16px;
+    border:none;
+    outline:none;
+    color:white;
+    padding:14px 16px;
+    background-color: inherit;
+    margin:0;
+
+}
+#header .dropdown-content{
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0,2);
+    z-index:1;
+}
+#header .dropdown-content a{
+    float:none;
+    color:black;
+    padding:12px 16px;
+    text-decoration:none;
+    display:block;
+    text-align:left;
+}
+#header .dropdown:hover .dropdown-content{
+    display:block;
+}
+
+
+#header .logo {
+    font-family: 'Muli', sans-serif;
+    float:left;
+    color:#f3f7cc;
+    font-size:20px;
+    margin-right:10%;
+}
+
+#header ul.menu {
+    list-style:none;
+    float:left;
+    margin:0;
+    padding:0;
+}
+#header ul.menu li {
+    float:left;
+    padding:4px 10px;
+}
+
+#header ul.menu li.selected a, #header ul.menu li.selected a:hover {
+    color:#1b6d32;
+    font-weight:bold;
+}
+
+#header a {
+    color:#f3f7cc;
+}
+#header a:hover {
+    color:#fff;
+}
+
+#header .user {
+    float:right;
+    padding-top:4px;
+}
+
+
+#sidebar {
+    text-align: center;
+    
+    font-family: 'simplifica', sans-serif; /* Specify your preferred font */
+    color: #333; /* Set the text color */
+    
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Add letter spacing */
+    margin-top: 20px; /* Add top margin for spacing */
+    
+
+
+}
+
+#content {
+    padding:30px 100px;
+}
+
+/* forms */
+
+
+label {
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px;
+}
+input, textarea {
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#efefef;
+    border:0;
+    padding:6px 10px;
+    font-size:14px;
+}
+input[type=submit], a.button {
+    font-weight:bold;
+    background:#12c064;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase;
+}
+.errorlist {
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px;
+}
+.helptext {
+    margin:0 0 20px 0;
+    color:#aaa;
+    clear:both;
+    float:left;
+    font-size:13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p {
+    text-align: center;
+    line-height: 1.8;
+}
